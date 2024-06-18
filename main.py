@@ -2,14 +2,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 data = pd.read_csv('data.csv')
-
-def cost_function(w, b, points):
-    total_error = 0
-    for i in range(len(points)):
-        x = points.iloc[i].StudyTime
-        y = points.iloc[i].Score
-        total_error += ((w*x + b) - y)**2
-    total_error = total_error / float(len(points))
+# Cost function as a function ====NOT USED====
+# def cost_function(w, b, points):
+#     total_error = 0
+#     for i in range(len(points)):
+#         x = points.iloc[i].StudyTime
+#         y = points.iloc[i].Score
+#         total_error += ((w*x + b) - y)**2
+#     total_error = total_error / float(len(points))
 
 def gradient_descent(w_now, b_now, points, L):
     w_gradient = 0
